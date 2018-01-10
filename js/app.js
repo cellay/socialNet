@@ -94,6 +94,7 @@ $('#login-google').on('click', function(event) {
   firebase.auth().auth.signInWithPopup(provider).then(function(result) {
     var token = result.credential.accessToken;
     var user = result.user;
+    console.log(user);
     // ...
     // $(location).attr('href', 'views/newsfeed.html'); //Direccionamos a la view de newsfeed
     

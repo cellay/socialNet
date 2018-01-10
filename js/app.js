@@ -17,7 +17,6 @@ $('#register').on('click', function (event) {
   const auth = firebase.auth();
 
   auth.createUserWithEmailAndPassword(email, password).catch(function (error) {
-    console.log(e.message);
     // Handle Errors here.
     var errorCode = error.code;
     var errorMessage = error.message;
@@ -33,7 +32,6 @@ $('#login').on('click', function (event) {
   const auth = firebase.auth();
 
   auth.signInWithEmailAndPassword(email, password).catch(function (error) {
-    console.log(e.message);
     // Handle Errors here.
     var errorCode = error.code;
     var errorMessage = error.message;
@@ -76,10 +74,9 @@ $('#login-fb').on('click', function(event) {
     var token = result.credential.accessToken;
     var user = result.user;
     // ...
-    $(location).attr('href', 'views/newsfeed.html'); //Direccionamos a la view de newsfeed
+    // $(location).attr('href', 'views/newsfeed.html'); //Direccionamos a la view de newsfeed
 
   }).catch(function(error) {
-    console.log(e.message);
     // Handle Errors here.
     var errorCode = error.code;
     var errorMessage = error.message;
@@ -100,10 +97,9 @@ $('#login-google').on('click', function(event) {
     var token = result.credential.accessToken;
     var user = result.user;
     // ...
-    $(location).attr('href', 'views/newsfeed.html'); //Direccionamos a la view de newsfeed
+    // $(location).attr('href', 'views/newsfeed.html'); //Direccionamos a la view de newsfeed
     
   }).catch(function(error) {
-    console.log(e.message);
     // Handle Errors here.
     var errorCode = error.code;
     var errorMessage = error.message;

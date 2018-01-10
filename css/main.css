@@ -1,0 +1,92 @@
+/* CSS */
+* {
+  box-sizing: border-box;
+}
+
+header {
+  width: 100%;
+  background:linear-gradient(to bottom right, #6C567B, #C06C84);
+  background-position: left top;
+  color: whitesmoke;
+  /* font-family: 'VT323', monospace; */
+  /* font-family: 'Fredericka the Great', cursive; */
+  font-family: 'Megrim', cursive;
+  height: 10vh;
+}
+
+body {
+  text-align: center;
+  background: transparent url('../assets/images/background-web.jpg');
+}
+
+.principal-view {
+  height: 85vh;
+  width: 100%;
+  color: #6C567B;
+}
+
+section {
+  height: auto;
+}
+
+footer {
+  color: #6C567B;
+  font-family: 'Bellefair', serif;
+  font-size: 1.2em;
+  font-weight: 800;
+  height: 5vh;
+}
+
+.d-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.intro-box {
+  text-align: justify;
+  background-color: rgba(248, 177, 149, 0.7);
+  font-family: 'Bellefair', serif;
+  box-shadow: 1px 1px 5px #6C567B;
+}
+
+.register-box {
+  background-color: rgba(248, 177, 149, 0.7);
+  box-shadow: 1px 1px 5px #6C567B;
+  font-family: 'Bellefair', serif;
+}
+
+input[type="email"], input[type="password"] {
+  border: 1px solid #bbb;
+  padding: 0 0 0 10px;
+  font-size: 14px;
+  margin-bottom: 20px;
+  }
+  
+.btn {
+  background: #6C567B;
+  border:none;
+  color: whitesmoke;
+  font-size: 18px;
+  font-weight: 200;
+  transition: box-shadow .4s ease;
+  margin-bottom: 20px;
+}
+
+.btn:hover {
+  box-shadow: 1px 1px 5px #555;
+  background-color: whitesmoke;
+}
+
+.login-facebook-google {
+  color: #6C567B;
+  font-family: 'Bellefair', serif;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.login-facebook-google img {
+  height: 50px;
+  align-self: center;
+} 

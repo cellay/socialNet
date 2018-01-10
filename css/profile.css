@@ -1,0 +1,38 @@
+/* CLASES REUTILIZABLES */
+* {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.bell img{
+    width: 20px;
+}
+
+/* CLASES ESPECÍFICAS DE PERFIL */
+.profile-min {
+  background-color: #3097d1;
+  padding: 1.5em;
+}
+
+.user-picture {
+  border: 3px solid #fff;
+}
+
+.post-section {
+  padding: 1.5em;
+}
+
+.post-txtarea {
+  margin-bottom: 1em;
+  width: 90%;
+}
+
+.photo-section {
+  background-color: #f5f8fa;
+  padding: 1.5em;
+}
+
+footer {
+  padding: 1.5em;
+}

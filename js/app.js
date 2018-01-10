@@ -14,9 +14,7 @@ firebase.initializeApp(config);
 $('#register').on('click', function (event) {
   var email = $('#email').val();
   var password = $('#pass').val();
-  var auth = firebase.auth();
-
-  auth.createUserWithEmailAndPassword(email, password).catch(function (error) {
+  firebase.auth().createUserWithEmailAndPassword(email, password).catch(function (error) {
     // Handle Errors here.
     var errorCode = error.code;
     var errorMessage = error.message;
@@ -29,9 +27,8 @@ $('#register').on('click', function (event) {
 $('#login').on('click', function (event) {
   var email = $('#email-register').val();
   var password = $('#pass-register').val();
-  var auth = firebase.auth();
-
-  auth.signInWithEmailAndPassword(email, password).catch(function (error) {
+  
+  firebase.auth().signInWithEmailAndPassword(email, password).catch(function (error) {
     // Handle Errors here.
     var errorCode = error.code;
     var errorMessage = error.message;
@@ -52,7 +49,12 @@ firebase.auth().onAuthStateChanged(function(user) {
     var uid = user.uid;
     var providerData = user.providerData;
     // ...
-    $(location).attr('href', 'views/newsfeed.html'); //Direccionamos a la view de newsfeed
+    if(user!=null) {
+      $(location).attr('href', 'views/newsfeed.html'); //Direccionamos a la view de newsfeed
+    } else {
+      console-log('Ingresa');
+    }
+    
 
   } else {
     // User is signed out.
@@ -91,7 +93,7 @@ $('#login-fb').on('click', function(event) {
 $('#login-google').on('click', function(event) {
   var provider = new firebase.auth.GoogleAuthProvider();
   
-  firebase.auth().auth.signInWithPopup(provider).then(function(result) {
+  firebase.auth().signInWithPopup(provider).then(function(result) {
     var token = result.credential.accessToken;
     var user = result.user;
     console.log(user);

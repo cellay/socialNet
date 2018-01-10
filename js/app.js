@@ -12,9 +12,9 @@ firebase.initializeApp(config);
 
 // Uniendo Firebase register
 $('#register').on('click', function (event) {
-  const email = $('#email').val();
-  const password = $('#pass').val();
-  const auth = firebase.auth();
+  var email = $('#email').val();
+  var password = $('#pass').val();
+  var auth = firebase.auth();
 
   auth.createUserWithEmailAndPassword(email, password).catch(function (error) {
     // Handle Errors here.
@@ -29,7 +29,7 @@ $('#register').on('click', function (event) {
 $('#login').on('click', function (event) {
   var email = $('#email-register').val();
   var password = $('#pass-register').val();
-  const auth = firebase.auth();
+  var auth = firebase.auth();
 
   auth.signInWithEmailAndPassword(email, password).catch(function (error) {
     // Handle Errors here.
@@ -68,9 +68,8 @@ var user = null;
 
 $('#login-fb').on('click', function(event) {
   var provider = new firebase.auth.FacebookAuthProvider();
-  const auth = firebase.auth();
 
-  auth.signInWithPopup(provider).then(function(result) {
+  firebase.auth().signInWithPopup(provider).then(function(result) {
     var token = result.credential.accessToken;
     var user = result.user;
     // ...
@@ -91,9 +90,8 @@ $('#login-fb').on('click', function(event) {
 
 $('#login-google').on('click', function(event) {
   var provider = new firebase.auth.GoogleAuthProvider();
-  const auth = firebase.auth();
-
-  auth.signInWithPopup(provider).then(function(result) {
+  
+  firebase.auth().auth.signInWithPopup(provider).then(function(result) {
     var token = result.credential.accessToken;
     var user = result.user;
     // ...

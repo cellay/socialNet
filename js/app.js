@@ -67,7 +67,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 var user = null;
 
 $('#login-fb').on('click', function(event) {
-  const provider = new firebase.auth.FacebookAuthProvider();
+  var provider = new firebase.auth.FacebookAuthProvider();
   const auth = firebase.auth();
 
   auth.signInWithPopup(provider).then(function(result) {
@@ -90,7 +90,7 @@ $('#login-fb').on('click', function(event) {
 });
 
 $('#login-google').on('click', function(event) {
-  const provider = new firebase.auth.GoogleAuthProvider();
+  var provider = new firebase.auth.GoogleAuthProvider();
   const auth = firebase.auth();
 
   auth.signInWithPopup(provider).then(function(result) {

@@ -14,30 +14,39 @@
 </head>
 
 <body>
-  <header class="header clearfix">
-    <h1 class="col-xs-5 col-md-2">beCreative</h1>
+  <header class=" clearfix">
+    <button class="nav">Hey! Sign In</button>
   </header>
   <section class="container-fluid d-flex principal-view">
     <section class="row">
-      <section class="col-sm-4 col-sm-offset-2 hidden-xs intro-box">
-        <h2>Lorem Ipsum</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium voluptatum quasi obcaecati expedita sequi maiores
-          aliquam ipsa quidem repellendus quis et amet, reprehenderit, ad dolorem eos deleniti excepturi in molestiae facilis
-          placeat earum architecto! Reiciendis incidunt delectus expedita in fugit.</p>
+      <section class="col-sm-4 col-sm-offset-1 hidden-xs">
+        <div class="d-flex logo-box">
+          <p>beCreative</p>
+        </div>
       </section>
-      <section class="col-sm-3 col-sm-offset-1 col-xs-10 col-xs-offset-1 d-flex register-box">
-        <form class="form-group d-flex">
-          <h3>¿Eres nuevo? Regístrate.</h3>
-          <input type="email" placeholder="Email" id="email">
-          <input type="password" placeholder="Password" id="pass">
-          <button class="btn" id="register">Sign up</button>
-          <p class="col-sm-12">By signing up, you agree to our Terms & Privacy Policy.</p>
-        </form>
-        <section class="row">
-          <p class="col-xs-12">¿Tienes una cuenta?
-            <a data-toggle="modal" data-target="#myModal">Ingresa</a>
-          </p>
-        </section>
+      <section class="col-sm-4 col-sm-offset-1 col-sm-push-1 col-xs-12 d-flex">
+        <div class=" d-flex register-box">
+          <div class="form-group d-flex">
+            <div class="row d-flex login-facebook-google">
+              <div class="col-xs-5 col-md-5 d-flex">
+                <img class="img" id="login-fb" src="https://upload.wikimedia.org/wikipedia/commons/c/c2/F_icon.svg" alt="Facebook">
+              </div>
+              <div class="col-xs-5 col-md-5 d-flex">
+                <img class="img" id="login-google" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google">
+              </div>
+            </div>
+
+            <input type="email" placeholder="Email" id="email-login">
+            <input type="password" placeholder="Password" id="pass-login">
+            <p class="col-sm-12">Welcome again! I hope you have a great day.</p>
+            <button class="btn" id="login">Sign up</button>
+            <section class="row">
+              <p class="col-xs-12">Don't have an account?
+                <a data-toggle="modal" data-target="#myModal">Sign In</a>
+              </p>
+            </section>
+          </div>
+        </div>
       </section>
     </section>
   </section>
@@ -50,30 +59,20 @@
   <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
       <!-- Modal content-->
-      <div class="modal-content register-box">
+      <div class="modal-content form-group">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Inicia sesión</h4>
+          <h4 class="modal-title">Sign In</h4>
         </div>
         <div class="modal-body">
-          <form class="form-group d-flex">
-            <input class="" type="email" placeholder="Email" id="email-register">
-            <input class="" type="password" placeholder="Password" id="pass-register">
-            <button class="btn" id="login">Sign in</button>
-            <p class="col-sm-12">Welcome again!</p>
-          </form>
+          <div class="d-flex">
+            <input class="" type="email" placeholder="Email" id="email">
+            <input class="" type="password" placeholder="Password" id="pass">
+            <p class="col-sm-12">By signing up, you agree to our Terms & Privacy Policy.</p>
+            <button class="btn" id="register">Sign in</button>
+          </div>
         </div>
         <div class="modal-footer container-fluid">
-          <div class="row d-flex login-facebook-google">
-            <div class="col-xs-5 col-md-5 d-flex">
-              <img class="img" id="login-fb" src="https://upload.wikimedia.org/wikipedia/commons/c/c2/F_icon.svg" alt="Facebook">
-              <figcaption>Ingresa con facebook</figcaption>
-            </div>
-            <div class="col-xs-5 col-md-5 d-flex">
-              <img class="img" id="login-google" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google">
-              <figcaption>Ingresa con google</figcaption>
-            </div>
-          </div>
 
         </div>
 
@@ -86,7 +85,7 @@
     crossorigin="anonymous"></script>
   <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-  crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script>
   <script src="js/app.js"></script>
 </body>
 

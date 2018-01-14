@@ -15,14 +15,14 @@ var config = {
       if(this.files&&this.files[0]) {
           var watcher = new FileReader();
           watcher.onload = function(e) {
-            var img = e.target.result;
+            var imgUp = e.target.result;
             dataImage.push({
                 urlLarge:e.target.result,
                 url:img
             });
             $('.box').append('<img src="" alt="">');
             console.log(this);
-            $(this).attr('src', img);
+            $(this).attr('src', imgUp);
           };
           watcher.readAsDataURL(this.files[0])
       }

@@ -20,9 +20,9 @@ var config = {
                 urlLarge:e.target.result,
                 url:img
             });
-            $('.box').append('<img src="" alt="">')
+            $('.box').append('<img src="" alt="">');
             console.log(this);
-            $(this>img).attr('src', img);
+            $(this).attr('src', img);
           };
           watcher.readAsDataURL(this.files[0])
       }

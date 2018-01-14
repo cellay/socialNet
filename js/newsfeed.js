@@ -11,15 +11,15 @@ var config = {
   var dataImage= firebase.database().ref('imagePost');
 
   $('#upload').on('change', function() {
-    console.log(this.files.length);
       if(this.files&&this.files[0]) {
           var watcher = new FileReader();
           watcher.onload = function(e) {
             dataImage.push({
-                urlLarge:e.target.result,
+                url:e.target.result,
             });
+
             $('.box').append('<img src="" alt="">');
-            $(this).attr('src', e.target.result);
+            $(img).attr('src', e.target.result);
           };
           watcher.readAsDataURL(this.files[0])
       }

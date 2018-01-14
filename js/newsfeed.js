@@ -20,7 +20,7 @@ var config = {
                 urlLarge:e.target.result,
                 url:img
             });
-            $('.box').append('<div class="imagePost"><img src="#" alt=""></div>')
+            $('.box').append('<img src="" alt="">')
             console.log(this);
             $(this>img).attr('src', img);
           };

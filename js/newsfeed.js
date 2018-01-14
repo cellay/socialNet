@@ -10,7 +10,8 @@ var config = {
 
   var dataImage= firebase.database().ref('imagePost');
 
-  $('#upload').change(function() {
+  $('#upload').on('change', function() {
+
       if(this.files&&this.files[0]) {
           var watcher = new FileReader();
           watcher.onload = function(e) {

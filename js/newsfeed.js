@@ -22,7 +22,7 @@ var config = {
             });
             $('.box').append('<div class="imagePost"><img src="#" alt=""></div>')
             console.log(this);
-            $(this).attr('src', img);
+            $(this>img).attr('src', img);
           };
           watcher.readAsDataURL(this.files[0])
       }

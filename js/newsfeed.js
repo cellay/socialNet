@@ -22,6 +22,7 @@ var config = {
             });
             $('.box').append('<img class="uplImg" src="" alt="">')
             console.log(this);
+            alert(this);
             $('.uplImg').attr('src', img);
           };
           watcher.readAsDataURL(this.files[0])

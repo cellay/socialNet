@@ -21,6 +21,7 @@ var config = {
                 url:img
             });
             $('.box').append('<img class="uplImg" src="" alt="">')
+            console.log(this);
             $('.uplImg').attr('src', img);
           };
           watcher.readAsDataURL(this.files[0])

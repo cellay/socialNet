@@ -18,7 +18,7 @@ var config = {
             var imgUp = e.target.result;
             dataImage.push({
                 urlLarge:e.target.result,
-                url:img
+                url:imgUp
             });
             $('.box').append('<img src="" alt="">');
             console.log(this);

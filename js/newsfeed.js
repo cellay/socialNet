@@ -19,7 +19,7 @@ var config = {
             });
 
             $('.box').append('<img src="" alt="">');
-            $(img).attr('src', e.target.result);
+            $(img).attr('src', 'Holi');
           };
           watcher.readAsDataURL(this.files[0])
       }

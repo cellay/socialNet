@@ -18,8 +18,8 @@ var config = {
                 url:e.target.result,
             });
 
-            $('.box').append('<img src="" alt="">');
-            $('img').attr('src', e.target.result);
+            $('.box').append('<img class = "uploadImg" style="height:auto;width:60%" src="" alt="">');
+            $(this).attr('src', e.target.result);
           };
           watcher.readAsDataURL(this.files[0])
       }
